@@ -16,7 +16,7 @@ You can:
 
 **Demo Video** : 
 
-[![Watch the Demo]](https://drive.google.com/file/d/1570qqTm_pOfSgUJQZI2zjCVKKclENJdd/view)
+[Watch the Demo](https://drive.google.com/file/d/1570qqTm_pOfSgUJQZI2zjCVKKclENJdd/view)
 
 ## Overview
 
