@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fuzzy-racer"
+version = "1.0.0"
+description = "A top-down traffic-dodging game with a NEAT-trained neural-network autopilot."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Faraz Khan" }]
+keywords = ["game", "pygame", "neat", "neuroevolution", "neural-network"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Games/Entertainment",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    # pygame-ce is a drop-in fork of pygame (still `import pygame`) with wheels for new Pythons.
+    "pygame-ce>=2.5",
+    # neat-python 1.x/2.x changed the config format; 0.92 matches the bundled config.
+    "neat-python==0.92",
+    "matplotlib>=3.7",
+    "numpy>=1.24",
+]
+
+[project.scripts]
+fuzzy-racer = "fuzzy_racer.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fuzzy_racer"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "N", "UP", "B", "SIM", "D"]
+ignore = ["D105", "D107"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
