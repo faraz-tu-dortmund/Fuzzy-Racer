@@ -19,7 +19,7 @@ You can:
 The package needs Python ≥ 3.10 and is installed with [uv](https://docs.astral.sh/uv/):
 
 ```bash
-git clone <this repository>
+git clone https://github.com/faraz-tu-dortmund/Fuzzy-Racer.git
 cd fuzzy-racer
 uv pip install -e .
 ```
