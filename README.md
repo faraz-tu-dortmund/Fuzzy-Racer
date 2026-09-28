@@ -14,6 +14,10 @@ You can:
 
 ![One frame from each of the five campaign levels](docs/levels.png)
 
+**Demo Video** : 
+
+[![Watch the Demo]](https://drive.google.com/file/d/1570qqTm_pOfSgUJQZI2zjCVKKclENJdd/view)
+
 ## Overview
 
 Fuzzy Racer is a 2D game written in Python with Pygame. The player controls a
