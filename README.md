@@ -14,6 +14,35 @@ You can:
 
 ![One frame from each of the five campaign levels](docs/levels.png)
 
+## Overview
+
+Fuzzy Racer is a 2D game written in Python with Pygame. The player controls a
+car on a road and steers left or right to avoid obstacles, mostly trucks and
+vans, that drive down towards it.
+
+The game has several levels, and each one is harder than the last. Obstacles
+move faster, more of them appear, and the gaps between waves change from
+level to level.
+
+Each kind of game object has its own class: the car, the obstacles and the
+road background. The obstacle class has several images, so different types of
+truck and other vehicles can appear.
+
+The game also uses the NEAT (NeuroEvolution of Augmenting Topologies) library
+to train an artificial neural network to play. NEAT is a genetic algorithm:
+it evolves a population of neural networks, keeps the ones that drive best,
+and breeds new ones from them. The network reads the game state, such as the
+positions of the car and the nearest obstacle, and decides whether to steer
+left or right.
+
+A human can play the game, or the trained network can play it on its own.
+After training, the best genome is saved and used as the autopilot, which the
+game calls the "Neural Engine".
+
+In short, the project is a working 2D Pygame game that either a human or an AI
+agent can play, where the AI agent is trained by neuroevolution with the NEAT
+algorithm.
+
 ## Installation
 
 The package needs Python ≥ 3.10 and is installed with [uv](https://docs.astral.sh/uv/):
